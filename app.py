@@ -7,8 +7,10 @@ import html
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 
-nltk.download('stopwords')
-nltk.download('punkt_tab')
+nltk.download("stopwords")
+nltk.download("punkt_tab")
+
+
 # =========================================================
 # PAGE CONFIGURATION
 # =========================================================
@@ -39,7 +41,10 @@ st.html("""
     padding-bottom: 30px;
 }
 
-/* Header */
+
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 .app-title {
     text-align: center;
@@ -62,7 +67,9 @@ st.html("""
 }
 
 
-/* Section */
+/* =========================================================
+   SECTION
+   ========================================================= */
 
 .section-box {
     background: rgba(12, 23, 42, 0.92);
@@ -88,7 +95,9 @@ st.html("""
 }
 
 
-/* Text area */
+/* =========================================================
+   TEXT AREA
+   ========================================================= */
 
 textarea {
     background-color: #162845 !important;
@@ -96,6 +105,10 @@ textarea {
     border: 1px solid #31578a !important;
     border-radius: 12px !important;
     font-size: 17px !important;
+
+    /* FIX: keep cursor and typed text on the left */
+    direction: ltr !important;
+    text-align: left !important;
 }
 
 textarea:focus {
@@ -104,7 +117,9 @@ textarea:focus {
 }
 
 
-/* Analyze button */
+/* =========================================================
+   ANALYZE BUTTON
+   ========================================================= */
 
 .stButton > button {
     background: linear-gradient(135deg, #8b4dff, #176dff) !important;
@@ -123,7 +138,9 @@ textarea:focus {
 }
 
 
-/* Your review */
+/* =========================================================
+   YOUR REVIEW
+   ========================================================= */
 
 .review-title {
     color: #d6deed;
@@ -141,10 +158,16 @@ textarea:focus {
     font-size: 17px;
     line-height: 1.6;
     margin-bottom: 24px;
+
+    /* Keep displayed review text left aligned */
+    direction: ltr;
+    text-align: left;
 }
 
 
-/* Result cards */
+/* =========================================================
+   RESULT CARDS
+   ========================================================= */
 
 .result-card {
     border-radius: 14px;
@@ -212,7 +235,9 @@ textarea:focus {
 }
 
 
-/* Interpretation */
+/* =========================================================
+   INTERPRETATION
+   ========================================================= */
 
 .interpretation {
     border-top: 1px solid #2b3e5c;
@@ -234,7 +259,9 @@ textarea:focus {
 }
 
 
-/* Footer */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 .footer {
     text-align: center;
@@ -500,6 +527,7 @@ if analyze:
         💬 Your Review
     </div>
 """)
+
 
         st.html(
             f"""
