@@ -1,14 +1,13 @@
 import streamlit as st
 import joblib
+import nltk
 import re
-import html
 
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
+
 nltk.download('stopwords')
-nltk.download('punkt')
-
-
+nltk.download('punkt_tab')
 # =========================================================
 # PAGE CONFIGURATION
 # =========================================================
